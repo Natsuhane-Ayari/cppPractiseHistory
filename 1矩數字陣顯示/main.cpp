@@ -8,9 +8,16 @@ int main(void){
     cin >> nums;
     for(int i=0;i<5;i++){
         for(int j=0;j<nums.length();j++){
-            cout << n1[nums[j]-48][i];
+            if(j==nums.length()-1){
+                for(int k=0;k<n1[nums[j]-48][i].length()-1;k++){
+                    cout << n1[nums[j]-48][i][k];
+                }
+            }
+            else{
+                cout << n1[nums[j]-48][i];
+            }
         }
-        cout << "  \n";
+        cout << "\n";
     }
     return 0;
 }
